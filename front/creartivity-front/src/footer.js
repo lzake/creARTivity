@@ -5,7 +5,7 @@ const Footer = (props) => {
 
 			return (
 
-    <footer classNameName="navbar-fixed-bottom">
+    <footer className="navbar-fixed-bottom">
         <div className="container">
           <div className="row">
 
