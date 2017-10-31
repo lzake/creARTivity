@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+}
+
+canvas {
+  border: 1px solid #000000;
+}
+
+#splitImages {
+  width: 440px;
+  float: left
+}
+
+#original {
+  width: 800px;
+  float: left;
+  margin-right: 20px
+}
+
+/*#test {
+  height: 400;
+  width: 400;
+}*/
