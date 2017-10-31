@@ -22,6 +22,10 @@
     -->
     <title>React App</title>
     <script src="https://use.fontawesome.com/20f0d93540.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
   </head>
   <body >
     <noscript>
@@ -39,4 +43,9 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script> $('.fliper-btn').click(function(){
+     $('.flip').find('.card').toggleClass('flipped');
+     console.log('test flip js');
+  });
+  </script>
 </html>
