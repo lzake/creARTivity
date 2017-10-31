@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import './modal.css';
-import Navbar from './navBar';
-import Jumbo from './jumbotron';
+import Navbar from './NavBar';
+import Jumbo from './Jumbotron';
 import Footer from './footer';
 import ModalSignLogin from './modal';
 
