@@ -3,33 +3,33 @@ import { Jumbotron, Button } from 'reactstrap';
 import PropTypes from 'prop-types'
 
 const Jumbo = (props) => {
-    
+
   return (
-    <div className="hero">
-      <Jumbotron>
-        
+<div >
+      <Jumbotron className="jumbo mb-0 rounded-0">
+
         <div className="row" >
-        <div className="col-md-5 px-md-5 pt-md-5"><br /><br />
-        <h1 className="display-4">Explore Your Mind's Eye</h1><br />
-        <h3 className="lead">Transmute images into unique creations via algorithm and human input. CreARTivity is a next generation interface leveraging simplisitic design and human creativity</h3>
+        <div className="col-md-5 px-md-5 "><br /><br />
+        <h4 className="display-8">Explore Your Mind&#39;s Eye</h4><br />
+        <h6 className="lead">Transmute images into unique creations via algorithm and human input.</h6>
         <hr className="my-2" />
-        <p>Ready. Set. creARTivity!</p>
+        <p></p>
         <p className="lead">
-          <Button color="primary">Learn More</Button>
+          <Button color="btn btn-danger">Ready. Set. creARTivity!</Button>
         </p>
         </div>
         <div className="col-md-7">
         <img src="https://s3-us-west-2.amazonaws.com/q3pics/hero.jpg" className="img-fluid" alt="Jackson Pollock Art"></img>
         </div>
         </div>
-        
+
       </Jumbotron>
-    </div>
+</div>
   );
 };
 
 
-export default Jumbo;
+
 
 Jumbotron.propTypes = {
     // Pass in a Component to override default element
@@ -37,3 +37,5 @@ Jumbotron.propTypes = {
     fluid: PropTypes.bool,
     className: PropTypes.string
   };
+
+export default Jumbo;
