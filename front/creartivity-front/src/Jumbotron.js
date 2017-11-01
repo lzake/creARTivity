@@ -7,11 +7,13 @@ const Jumbo = (props) => {
   return (
 <div >
       <Jumbotron className="jumbo mb-0 rounded-0">
-
+      <style>
+      @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+      </style>
         <div className="row" >
         <div className="col-md-5 px-md-5 "><br /><br />
-        <h4 className="display-8 text-white">Explore Your Mind&#39;s Eye</h4><br />
-        <h6 className="lead text-white">Transmute images into unique creations via algorithm and human input.</h6>
+        <h4 className="display-8 text-white frontlog">Explore Your Mind&#39;s Eye</h4><br />
+        <h6 className="lead text-white frontlog">Transmute images into unique creations via algorithm and human input.</h6>
         <hr className="my-2" />
         <p></p>
         <p className="lead">

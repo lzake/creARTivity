@@ -158,3 +158,21 @@ footer{
     color: red;
     font-size:20pt;
 }
+
+.frontlog{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 24pt;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.whiteoutline{
+    text-shadow:
+    -.2px -.2px 0 rgb(255, 255, 255),
+    .2px -.2px 0 rgb(255, 255, 255),
+    -.2px .2px 0 rgb(255, 255, 255),
+    .2px .2px 0 rgb(255, 255, 255);
+}

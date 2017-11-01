@@ -54,12 +54,12 @@ export default class NavBar extends React.Component {
       </style>
       
         <Navbar className="fixed-top" color="faded" light expand="md">
-          <NavbarBrand href="/">cre<span className="createorlog3">ART</span>ivity</NavbarBrand>
+          <NavbarBrand href="/" className="whiteoutline">cre<span className="createorlog3">ART</span>ivity</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-              <NavLink onClick={this.toggleModal} href="#">Sign Up/In
+              <NavLink onClick={this.toggleModal} href="#" className="whiteoutline">Sign Up/In
               <Modal isOpen={this.state.modal} toggle={this.toggleModal} className={this.props.className}>
 
                 <ModalBody>
@@ -118,7 +118,7 @@ export default class NavBar extends React.Component {
             </NavItem>
 
             <NavItem>
-            <NavLink href="https://www.linkedin.com/in/zachariahlowe">Contact</NavLink>
+            <NavLink href="https://www.linkedin.com/in/zachariahlowe" className="whiteoutline">Contact</NavLink>
 
           </NavItem>
             </Nav>
