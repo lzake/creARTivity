@@ -49,18 +49,17 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div className="container px-md-5 ">
+      <style>
+      @import url('https://fonts.googleapis.com/css?family=Lobster');
+      </style>
+      
         <Navbar className="fixed-top" color="faded" light expand="md">
-          <NavbarBrand href="/">creARTivity</NavbarBrand>
+          <NavbarBrand href="/" className="whiteoutline">cre<span className="createorlog3">ART</span>ivity</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-
               <NavItem>
-                <NavLink href="https://www.linkedin.com/in/zachariahlowe">Create</NavLink>
-              </NavItem>
-
-              <NavItem>
-              <NavLink onClick={this.toggleModal} href="#" > Sign Up/In
+              <NavLink onClick={this.toggleModal} href="#" className="whiteoutline">Sign Up/In
               <Modal isOpen={this.state.modal} toggle={this.toggleModal} className={this.props.className}>
 
                 <ModalBody>
@@ -75,16 +74,16 @@ export default class NavBar extends React.Component {
 
                                         <br />
 
-                                        <h1 className="text-center">creARTivity</h1>
-
+                                        <h1 className="text-center">cre<span className="createorlog1">ART</span>ivity</h1>
+<br />
                                         <br />
 
                                         <input className="form-control" placeholder="Email" type="email" minlength="6" maxlength="20" required/>
                                         <input className="form-control" placeholder="Password"type="password" minlength="6" maxlength="20" required/>
                                         <button className="btn btn-primary btn-block" type="submit">LOG IN</button>
-                                        <hr />
+                                        <br /><br /><br /><br /><br /><br /><br />
                                         <p className="text-center">
-                                          <a href="#" className="fliper-btn"  onClick={this.flipper1.bind(this)}>Create new account?</a>
+                                          <a href="#" className="fliper-btn createorlog"  onClick={this.flipper1.bind(this)}>Create new account?</a>
                                         </p>
                                       </form>
                                     </div>
@@ -93,7 +92,7 @@ export default class NavBar extends React.Component {
                                       <div className="panel panel-default">
                                           <form className="form-horizontal" data-toggle="validator" role="form">
                                             <br />
-                                            <h1 className="text-center">creARTivity</h1>
+                                            <h1 className="text-center">cre<span className="createorlog1">ART</span>ivity</h1>
                                             <br />
                                             <label>Basic Information</label>
                                             <input className="form-control" placeholder="Full name" minlength="6" maxlength="20" type="text" required/>
@@ -103,7 +102,7 @@ export default class NavBar extends React.Component {
                                             <input type="password" className="form-control" minlength="6" maxlength="20" placeholder="Confirm Password" data-match="#inputPassword" data-match-error="Whoops, these don't match" required/>
                                             <button className="btn btn-primary btn-block" type="submit">SIGN UP</button><br />
                                             <p className="text-center">
-                                              <a href="#" className="fliper-btn" onClick={this.flipper2.bind(this)}>Already have an account?</a>
+                                              <a href="#" className="fliper-btn createorlog" onClick={this.flipper2.bind(this)}>Already have an account?</a>
                                             </p>
                                           </form>
                                       </div>
@@ -119,7 +118,7 @@ export default class NavBar extends React.Component {
             </NavItem>
 
             <NavItem>
-            <NavLink href="https://www.linkedin.com/in/zachariahlowe">Contact</NavLink>
+            <NavLink href="https://www.linkedin.com/in/zachariahlowe" className="whiteoutline">Contact</NavLink>
 
           </NavItem>
             </Nav>
