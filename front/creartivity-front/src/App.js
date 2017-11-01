@@ -7,6 +7,7 @@ import Jumbo from './Jumbotron';
 import Footer from './footer';
 import Canvas from './Canvas';
 import ModalSignLogin from './modal';
+import Selectsplice from './selectSplice';
 
 
 
@@ -28,6 +29,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Jumbo />
+        <Selectsplice />
         <Canvas className="hidden"/>
         <Footer />
       </div>

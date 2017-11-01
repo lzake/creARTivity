@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "public": "./build",
+    "ignore": [
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
