@@ -119,3 +119,42 @@ footer{
     margin-right: 10px;
     font-size:14px;
 }
+.createorlog{
+    font-family: 'Lobster', cursive;
+    color: rgb(0, 217, 255);
+    font-size:14pt;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.createorlog1{
+    font-family: 'Lobster', cursive;
+    color: red;
+    font-size:18pt;
+}
+
+.createorlog2{
+    font-family: 'Lobster', cursive;
+    color: rgb(255, 255, 255);
+    font-size:10pt;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.createorlog3{
+    font-family: 'Lobster', cursive;
+    color: red;
+    font-size:14pt;
+}
+
+.createorlog4{
+    font-family: 'Lobster', cursive;
+    color: red;
+    font-size:20pt;
+}

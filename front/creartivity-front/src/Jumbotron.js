@@ -15,7 +15,7 @@ const Jumbo = (props) => {
         <hr className="my-2" />
         <p></p>
         <p className="lead">
-          <Button color="btn btn-danger">Ready. Set. creARTivity!</Button>
+          <Button color="btn btn-danger">Ready. Set. cre<span className="createorlog2">ART</span>ivity</Button>
         </p>
         </div>
         <div className="col-md-7 rounded">
