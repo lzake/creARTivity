@@ -21,7 +21,7 @@ const Footer = (props) => {
                              </li>
 
                              <li>
-                                <a href="#">About</a>
+                                <a href="./CanvasPage.js">About</a>
                              </li>
 
                              <li>

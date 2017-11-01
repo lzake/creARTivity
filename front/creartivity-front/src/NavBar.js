@@ -76,13 +76,13 @@ export default class NavBar extends React.Component {
                                         <br />
 
                                         <h1 className="text-center">creARTivity</h1>
-
+<br />
                                         <br />
 
                                         <input className="form-control" placeholder="Email" type="email" minlength="6" maxlength="20" required/>
                                         <input className="form-control" placeholder="Password"type="password" minlength="6" maxlength="20" required/>
                                         <button className="btn btn-primary btn-block" type="submit">LOG IN</button>
-                                        <hr />
+                                        <br /><br /><br /><br /><br /><br /><br />
                                         <p className="text-center">
                                           <a href="#" className="fliper-btn"  onClick={this.flipper1.bind(this)}>Create new account?</a>
                                         </p>
