@@ -4,11 +4,6 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Fade } from 'reacts
 import PropTypes from 'prop-types';
 import './modal.css';
 
-function activateLasers(e) {
-  e.preventDefault();
-  console.log('clicked.');
-}
-
 export default class NavBar extends React.Component {
   
   constructor(props) {
