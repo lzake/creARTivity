@@ -1,46 +1,68 @@
 var express = require('express');
 var router = express.Router();
+
 //Additional connections & modules
 var knex = require('../db/connection');
 var bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
 require('dotenv').config();
+
+
 //native bycrpt alternate to bycrpt const bcrypt = require('bcryptjs')
+
 function hashSHA256(str) {
     const crypto = require('crypto');
     const hash = crypto.createHash('sha256');
     hash.update(str)
     return hash.digest('hex')
 }
+
 router.post('/login', function(req, res, next) {
   let email = req.body.email;
   //console.log(email);
   let password = req.body.password;
   let query = {password: hashSHA256(password, 12) , email}
-  console.log(query);
+  //console.log(query);
+
   knex('users')
   //implicitly returned
-  .select('*')
+  .select('*') //if you leave this option on just to be clear (this happens )
   .where(query)
-  .then ( user => {
+  .then (user => {
     if (user.length === 0) {
-      res.json({message: 'login failed, try again'});
+      res.json({error: 'Login failed, please try again with a valid email and password, or Sign Up'});
     } else {
+      // let hashedPassword = user[0].password;
+      // console.log(hashedPassword);
+      //let match = query.compareSync(password, token)
+      // console.log('match' , match);
+
       let payload = JSON.parse(JSON.stringify(user[0])); //just the way knex needs to conver the array to a single object
-      //console.log(newUser);
-      console.log(payload);
-      //remove password from payload to the front end bc you don't want to send that password to the front-end (security reasons)
-      delete payload.password;
+
       let token = jwt.sign(payload, process.env.TOKEN_SECRET);
-      res.json({user, token, message: 'login successful'});
+        //console.log(token);
+      res.json({user, token, message: 'login successful!'});
+
+
+      delete payload.password;
+      //console.log(newUser);
+      console.log(payload); //prints to server console
+      //remove password from payload to the front end bc you don't want to send that password to the front-end (security reasons)
+      //delete payload.password;
+
     }
+
   })
+
+
 });
+
 router.post('/signup', function(req, res, next) {
   //res.json({message: 'signup successful'});
   let email = req.body.email;
   //console.log(email);
   let password = req.body.password;
+
   knex('users')
   //implicitly returned
   .select('*')
@@ -53,13 +75,14 @@ router.post('/signup', function(req, res, next) {
       console.timeEnd('inputs')
       //Insert into database
       req.body.password = hash;
+
       knex('users')
         .insert(req.body)
         .returning('*')
         .then(newUser => {
           let payload = JSON.parse(JSON.stringify(newUser[0])); //just the way knex needs to conver the array to a single object
           //console.log(newUser);
-          console.log(payload);
+          //console.log(payload);
           //remove password from payload to the front end bc you don't want to send that password to the front-end (security reasons)
           delete payload.password;
           let token = jwt.sign(payload, process.env.TOKEN_SECRET);
@@ -71,12 +94,12 @@ router.post('/signup', function(req, res, next) {
     }
   })
 });
+
 function insertUser(user){
   return knex('users')
     .insert(user)
     .returning('*')
     .then(newUser => {
-      console.log(newUser);
+      //console.log(newUser);
     })
 }
-module.exports = router;
