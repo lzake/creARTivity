@@ -11,7 +11,7 @@ const Jumbo = (props) => {
       @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
       </style>
         <div className="row" >
-        <div className="col-md-5 px-md-5 "><br /><br />
+        <div className="col-s-12 col-md-5 px-md-6 "><br /><br />
         <h4 className="display-8 text-white frontlog">Explore Your Mind&#39;s Eye</h4><br />
         <h6 className="lead text-white frontlog">Transmute images into unique creations via algorithm and human input.</h6>
         <hr className="my-2" />
@@ -20,7 +20,7 @@ const Jumbo = (props) => {
           <Button color="btn btn-danger">Ready. Set. cre<span className="createorlog2">ART</span>ivity</Button>
         </p>
         </div>
-        <div className="col-md-7 rounded">
+        <div className="col-s-12 col-md-7 rounded">
         <img src="https://s3-us-west-2.amazonaws.com/q3pics/hero.jpg" className="img-fluid rounded" alt="Jackson Pollock Art"></img>
         </div>
         </div>
