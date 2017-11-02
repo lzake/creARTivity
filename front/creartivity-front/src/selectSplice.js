@@ -90,33 +90,41 @@ class Selectsplice extends Component {
     });
 
     return (
-        <div className="row">
-        <div className=" col-6 ml-1 mt-1">
-          <Carousel
-            activeIndex={activeIndex}
-            next={this.next}
-            previous={this.previous}
-          >
-            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-            {slides}
-            <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-            <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-          </Carousel>
-          <div className="ml-1">
-            <Button color="primary">Start Over</Button>{' '}
-          </div>
-      </div>
+        <div className="row  mt-3">
+            <Card className="col-s-11 col-md-10 mx-auto">
 
-      <div className="col-5 mt-1">
-          <Card>
-            <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-            <CardBody>
-              <Button>creART!</Button>
-            </CardBody>
-          </Card>
-         </div>
+                <div className="row">
+
+                    <div className=" col-md-6 ">
+                        <CardTitle>
+                            <div className="float-left ml-4 my-2">Art Gallery</div>
+                        </CardTitle>
+                      <Carousel
+                        activeIndex={activeIndex}
+                        next={this.next}
+                        previous={this.previous}
+                      >
+                        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+                        {slides}
+                        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+                        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+                      </Carousel>
+                  <CardBody className="float-left ml-2">
+                    <Button color="primary btn-lg active"><i className="fa fa-refresh fa-lg text-white" aria-hidden="true"></i>Start Over</Button>{' '}
+                  </CardBody>
+              </div>
+                    <div className="col-md-6 ">
+                        <CardTitle>
+                            <div className="float-left ml-4 my-2">Spliced Art</div>
+                        </CardTitle>
+                        <CardImg top width="100%" height="55%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                        <CardBody className="float-left ml-2">
+                          <Button color="primary btn-lg active">creARTivity!<i className="fa fa-arrow-right fa-lg text-white" aria-hidden="true"></i></Button>
+                        </CardBody>
+                    </div>
+                </div>
+            </Card>
         </div>
-
     );
   }
 }
