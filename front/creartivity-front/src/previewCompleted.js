@@ -11,7 +11,8 @@ import {
   CardImgOverlay,
   CardLink
 } from 'reactstrap';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 
@@ -23,28 +24,29 @@ class PreviewCompleted extends Component {
 
   render() {
     return (
-        <div className="row  mt-3">
+        <div className="row  my-3">
             <Card className="col-s-11 col-md-10 mx-auto">
+                <CardTitle>
+                    <div className="float-left ml-4 my-2">Your creARTtion!</div>
+                </CardTitle>
+                <CardImg top width="100%" height="55%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                <CardBody className="col-12">
+                    <div className="row ">
+                        <div className= "col-s-12 col-m-3 mx-auto mt-1 ">
+                              <Link  to="/select"><Button color="primary btn-lg active "><i className=" fa fa-arrow-left fa-lg text-white" aria-hidden="true"></i>Go Back</Button></Link>
+                        </div>
+                        <div className= "col-s-12 col-m-3 mx-auto mt-1">
 
+                              <Button color="primary btn-lg active ">Download<i className="fa fa-floppy-o fa-lg text-white" aria-hidden="true"></i></Button>
 
-                        <CardTitle>
-                            <div className="float-left ml-4 my-2">Your creARTtion!</div>
-                        </CardTitle>
-                        <CardImg top width="100%" height="55%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                        <CardBody className="col-12">
-                            <div className="row ">
-                                <div className= "col-s-12 col-m-3 mx-auto mt-1 ">
-                                      <Button color="primary btn-lg active "><i className=" fa fa-arrow-left fa-lg text-white" aria-hidden="true"></i>Go Back</Button>
-                                </div>
-                                <div className= "col-s-12 col-m-3 mx-auto mt-1">
-                                      <Button color="primary btn-lg active ">Download<i className="fa fa-floppy-o fa-lg text-white" aria-hidden="true"></i></Button>
-                                  </div>
-                                <div className= "col-s-12 col-m-3 mx-auto mt-1">
-                                      <Button color="primary btn-lg active ">Save to Gallery<i className="fa fa-cloud-upload fa-lg text-white" aria-hidden="true"></i></Button>
-                                </div>
-
-                            </div>
-                        </CardBody>
+                          </div>
+                        <div className= "col-s-12 col-m-3 mx-auto mt-1">
+                            <Link to="/gallery">
+                              <Button color="primary btn-lg active ">Save<i className="fa fa-cloud-upload fa-lg text-white" aria-hidden="true"></i></Button>
+                            </Link>
+                        </div>
+                    </div>
+                </CardBody>
             </Card>
         </div>
     );
@@ -55,7 +57,7 @@ class PreviewCompleted extends Component {
 Button.propTypes = {
   active: PropTypes.bool,
   block: PropTypes.bool,
-  color: PropTypes.string, // default: 'secondary'
+  className: PropTypes.string, // default: 'secondary'
   disabled: PropTypes.bool,
 
   // Pass in a Component to override default button element

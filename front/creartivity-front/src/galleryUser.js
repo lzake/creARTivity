@@ -6,10 +6,11 @@ import { Media,
     CardHeader,
 CardTitle } from 'reactstrap';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const GalleryUser = () => {
   return (
-      <Card className="col-s-11 col-md-10 mx-auto" >
+      <Card className="col-s-11 col-md-10 mx-auto my-3" >
         <CardTitle >
             <div className="float-left ml-4 my-2">Gallery
             </div>

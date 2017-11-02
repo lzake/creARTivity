@@ -1,9 +1,18 @@
 import React from 'react';
 import { Jumbotron, Button } from 'reactstrap';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const Jumbo = (props) => {
 
+export default class Jumbo extends React.Component {
+
+constructor(props) {
+    super(props);
+
+}
+
+
+render (){
   return (
 <div >
       <Jumbotron className="jumbo mb-0 rounded-0">
@@ -17,7 +26,7 @@ const Jumbo = (props) => {
         <hr className="my-2" />
         <p></p>
         <p className="lead">
-          <Button color="btn btn-danger">Ready. Set. cre<span className="createorlog2">ART</span>ivity</Button>
+          <Link to="/select" className="btn btn-danger">Ready. Set. cre<span className="createorlog2">ART</span>ivity</Link>
         </p>
         </div>
         <div className="col-s-12 col-md-7 rounded">
@@ -30,7 +39,7 @@ const Jumbo = (props) => {
   );
 };
 
-
+}
 
 
 Jumbotron.propTypes = {
@@ -38,6 +47,5 @@ Jumbotron.propTypes = {
     tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
     fluid: PropTypes.bool,
     className: PropTypes.string
-  };
 
-export default Jumbo;
+}

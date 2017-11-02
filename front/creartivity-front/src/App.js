@@ -10,6 +10,8 @@ import ModalSignLogin from './modal';
 import Selectsplice from './selectSplice';
 import PreviewCompleted from './previewCompleted';
 import GalleryUser from './galleryUser';
+import PropTypes from 'prop-types';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 
@@ -19,34 +21,34 @@ class App extends Component {
     super(props)
     this.state = {
         showPanel:'hidden',
-        showJumbo: true,
-        showSelect: false,
-        showSplice: false,
-        showCanvas: false,
-        showPreview: false,
-        showGallery: false
+        selectedArt:null,
+        createdArt:null,
     }
   }
-
-  toggle = () => {
-    this.setState({
-      showPanel: !this.state.showPanel
-    });
-}
 
   render() {
     return (
       <div className="App">
         <Navbar />
-        <Jumbo />
-        <Selectsplice />
-        <PreviewCompleted />
-        <Canvas className="hidden"/>
-        <GalleryUser />
+            <Router>
+                <div>
+                  <Route exact path="/" component={Jumbo} />
+                  <Route exact path="/select" component={Selectsplice} />
+                  <Route exact path="/draw" component={Canvas} />
+                  <Route exact path="/preview" component={PreviewCompleted} />
+                  <Route exact path="/gallery" component={GalleryUser} />
+                </div>
+            </Router>
         <Footer />
       </div>
     );
   }
 }
+
+App.propTypes = {
+    // Pass in a Component to override default element
+
+    onChange: PropTypes.func
+  };
 
 export default App;
