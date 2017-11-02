@@ -8,6 +8,7 @@ import Footer from './footer';
 import Canvas from './Canvas';
 import ModalSignLogin from './modal';
 import Selectsplice from './selectSplice';
+import PreviewCompleted from './previewCompleted';
 
 
 
@@ -15,7 +16,14 @@ class App extends Component {
 
   constructor(props){
     super(props)
-    this.state = {showPanel:'hidden'}
+    this.state = {
+        showPanel:'hidden',
+        showJumbo: true,
+        showSelect: false,
+        showSplice: false,
+        showCanvas: false,
+        showPreview: false,
+        showGallery: false}
   }
 
   toggle = () => {
@@ -30,6 +38,7 @@ class App extends Component {
         <Navbar />
         <Jumbo />
         <Selectsplice />
+        <PreviewCompleted />
         <Canvas className="hidden"/>
         <Footer />
       </div>
