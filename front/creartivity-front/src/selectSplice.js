@@ -117,7 +117,7 @@ class Selectsplice extends Component {
                         <CardTitle>
                             <div className="float-left ml-4 my-2">Spliced Art</div>
                         </CardTitle>
-                        <CardImg top width="100%" height="55%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                        <CardImg top width="100%" height="52%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
                         <CardBody className="float-left ml-2">
                           <Button color="primary btn-lg active">creARTivity!<i className="fa fa-arrow-right fa-lg text-white" aria-hidden="true"></i></Button>
                         </CardBody>

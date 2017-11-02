@@ -9,6 +9,7 @@ import Canvas from './Canvas';
 import ModalSignLogin from './modal';
 import Selectsplice from './selectSplice';
 import PreviewCompleted from './previewCompleted';
+import GalleryUser from './galleryUser';
 
 
 
@@ -23,7 +24,8 @@ class App extends Component {
         showSplice: false,
         showCanvas: false,
         showPreview: false,
-        showGallery: false}
+        showGallery: false
+    }
   }
 
   toggle = () => {
@@ -40,6 +42,7 @@ class App extends Component {
         <Selectsplice />
         <PreviewCompleted />
         <Canvas className="hidden"/>
+        <GalleryUser />
         <Footer />
       </div>
     );

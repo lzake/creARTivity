@@ -1,6 +1,6 @@
 import React from 'react';
 import { Jumbotron, Button } from 'reactstrap';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Jumbo = (props) => {
 
