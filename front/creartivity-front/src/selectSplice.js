@@ -16,7 +16,8 @@ import {
   CardImgOverlay,
   CardLink
 } from 'reactstrap';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const items = [
   {
@@ -90,7 +91,7 @@ class Selectsplice extends Component {
     });
 
     return (
-        <div className="row  mt-3">
+        <div className="row  my-3">
             <Card className="col-s-11 col-md-10 mx-auto">
 
                 <div className="row">
@@ -110,7 +111,7 @@ class Selectsplice extends Component {
                         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
                       </Carousel>
                   <CardBody className="float-left ml-2">
-                    <Button color="primary btn-lg active"><i className="fa fa-refresh fa-lg text-white" aria-hidden="true"></i>Start Over</Button>{' '}
+                    <Link to="/" ><Button color="primary btn-lg active"><i className="fa fa-refresh fa-lg text-white" aria-hidden="true"></i>Start Over</Button></Link>{' '}
                   </CardBody>
               </div>
                     <div className="col-md-6 ">
@@ -119,7 +120,7 @@ class Selectsplice extends Component {
                         </CardTitle>
                         <CardImg top width="100%" height="52%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
                         <CardBody className="float-left ml-2">
-                          <Button color="primary btn-lg active">creARTivity!<i className="fa fa-arrow-right fa-lg text-white" aria-hidden="true"></i></Button>
+                          <Link to="/draw"><Button color="primary btn-lg active">creARTivity!<i className="fa fa-arrow-right fa-lg text-white" aria-hidden="true"></i></Button></Link>
                         </CardBody>
                     </div>
                 </div>
