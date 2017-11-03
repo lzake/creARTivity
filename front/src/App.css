@@ -24,6 +24,7 @@
 
 
 
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -183,4 +184,8 @@ footer{
     border-color: black;
     border-style: solid;
     border-width: 1px;
+}
+
+div.card.flipped{
+    background-color:transparent;
 }

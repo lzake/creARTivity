@@ -72,8 +72,8 @@ export default class NavBar extends React.Component {
                                         <br />
                                         <br />
 
-                                        <input className="form-control" placeholder="Email" type="email" minlength="6" maxlength="20" required/>
-                                        <input className="form-control" placeholder="Password"type="password" minlength="6" maxlength="20" required/>
+                                        <input className="form-control" placeholder="Email" type="email" minlength="6" maxLength="20" required/>
+                                        <input className="form-control" placeholder="Password"type="password" minlength="6" maxLength="20" required/>
                                         <button className="btn btn-primary btn-block" type="submit">LOG IN</button>
                                         <br /><br /><br /><br /><br /><br /><br />
                                         <p className="text-center">
@@ -89,11 +89,11 @@ export default class NavBar extends React.Component {
                                             <h1 className="text-center">cre<span className="createorlog1">ART</span>ivity</h1>
                                             <br />
                                             <label>Basic Information</label>
-                                            <input className="form-control" placeholder="Full name" minlength="6" maxlength="20" type="text" required/>
-                                            <input className="form-control" placeholder="Email"type="email"  minlength="6" maxlength="20" required/>
+                                            <input className="form-control" placeholder="Full name" minlength="6" maxLength="20" type="text" required/>
+                                            <input className="form-control" placeholder="Email"type="email"  minlength="6" maxLength="20" required/>
                                             <label>Private Information</label>
-                                            <input type="password" className="form-control" placeholder="Password (min 6 characters)" minlength="6" maxlength="20" id="inputPassword" required/>
-                                            <input type="password" className="form-control" minlength="6" maxlength="20" placeholder="Confirm Password" data-match="#inputPassword" data-match-error="Whoops, these don't match" required/>
+                                            <input type="password" className="form-control" placeholder="Password (min 6 characters)" minlength="6" maxLength="20" id="inputPassword" required/>
+                                            <input type="password" className="form-control" minlength="6" maxLength="20" placeholder="Confirm Password" data-match="#inputPassword" data-match-error="Whoops, these don't match" required/>
                                             <button className="btn btn-primary btn-block" type="submit">SIGN UP</button><br />
                                             <p className="text-center">
                                               <a href="#" className="fliper-btn createorlog" onClick={this.flipper2.bind(this)}>Already have an account?</a>

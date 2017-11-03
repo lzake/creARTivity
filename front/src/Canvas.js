@@ -35,10 +35,10 @@ export default class Canvas extends React.Component {
       <Button id="CutImageUp" type="button" name="button" onClick={this.click1.bind(this)}>Cut Image Into Squares</Button>
       <Button id="GenerateArtwork" type="button" name="button" onClick={this.click2.bind(this)}>Generate Artwork</Button>
       <Button id="SaveImage" type="button" name="button" onClick={this.click3.bind(this)}>Save Image</Button>
-      
-      <br />
-      <canvas ref="canvas" className="canvas align-middle" width={300} height={300}></canvas>
-      <br />
+     
+      <div className="align-middle">
+      <canvas ref="canvas" className="canvas align-middle"></canvas>
+      </div>
 
         <div className="button">
           <Button  color="primary" size="lg"><i className="fa fa-step-backward text-white"></i>  Go Back</Button>{' '}
