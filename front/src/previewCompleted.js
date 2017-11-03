@@ -33,7 +33,7 @@ class PreviewCompleted extends Component {
                 <CardBody className="col-12">
                     <div className="row ">
                         <div className= "col-s-12 col-m-3 mx-auto mt-1 ">
-                              <Link  to="/select"><Button color="primary btn-lg active "><i className=" fa fa-arrow-left fa-lg text-white" aria-hidden="true"></i>Go Back</Button></Link>
+                              <Link  to="/draw"><Button color="primary btn-lg active "><i className=" fa fa-arrow-left fa-lg text-white" aria-hidden="true"></i>Go Back</Button></Link>
                         </div>
                         <div className= "col-s-12 col-m-3 mx-auto mt-1">
 
