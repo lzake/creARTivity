@@ -19,33 +19,61 @@ import {
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+
 const items = [
   {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa1d%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa1d%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    src: 'https://s3-us-west-2.amazonaws.com/q3pics/jp1.jpg',
+    altText: 'Jackson Pollock 1',
+    caption: 'Jackson Pollock 1'
   },
   {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    src: 'https://s3-us-west-2.amazonaws.com/q3pics/jp2.jpg',
+    altText: 'Jackson Pollock 2',
+    caption: 'Jackson Pollock 2'
   },
   {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
-  }
+    src: 'https://s3-us-west-2.amazonaws.com/q3pics/jp3.jpg',
+    altText: 'Jackson Pollock 3',
+    caption: 'Jackson Pollock 3'
+    },
+    {
+      src: 'https://s3-us-west-2.amazonaws.com/q3pics/jp4.jpg',
+      altText: 'Jackson Pollock 4',
+      caption: 'Jackson Pollock 4'
+    },
+    {
+      src: 'https://s3-us-west-2.amazonaws.com/q3pics/jp5.jpg',
+      altText: 'Jackson Pollock 5',
+      caption: 'Jackson Pollock 5'
+    },
+    {
+      src: 'https://s3-us-west-2.amazonaws.com/q3pics/jp6.jpg',
+      altText: 'Jackson Pollock 6',
+      caption: 'Jackson Pollock 6'
+    }
 ];
 
 class Selectsplice extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeIndex: 0 };
+    this.state = {
+        activeIndex: 0,
+        selectedArt : items[0] };
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
+    this.selectedArt = this.selectedArt.bind(this);
+  }
+
+
+
+  selectedArt (selectedArt) {
+      console.log('selected art method', selectedArt);
+      this.setState({
+          selectedArt
+      })
   }
 
   onExiting() {
@@ -79,14 +107,19 @@ class Selectsplice extends Component {
     const slides = items.map((item) => {
       return (
         <CarouselItem
+
           onExiting={this.onExiting}
           onExited={this.onExited}
           key={item.src}
           src={item.src}
           altText={item.altText}
         >
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+
+          <CarouselCaption  className="text-dark"captionHeader={item.caption} />
+              <span className="click-mask"onClick={()=>this.selectedArt(item)}>
+              </span>
         </CarouselItem>
+
       );
     });
 
@@ -100,7 +133,7 @@ class Selectsplice extends Component {
                         <CardTitle>
                             <div className="float-left ml-4 my-2">Art Gallery</div>
                         </CardTitle>
-                      <Carousel
+                      <Carousel className="h-75"
                         activeIndex={activeIndex}
                         next={this.next}
                         previous={this.previous}
@@ -111,16 +144,16 @@ class Selectsplice extends Component {
                         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
                       </Carousel>
                   <CardBody className="float-left ml-2">
-                    <Link to="/" ><Button color="primary btn-lg active"><i className="fa fa-refresh fa-lg text-white" aria-hidden="true"></i>Start Over</Button></Link>{' '}
+                    <Link to="/select" ><Button color="primary btn-lg active"><i className="fa fa-refresh fa-lg text-white" aria-hidden="true"></i>Start Over</Button></Link>{' '}
                   </CardBody>
               </div>
                     <div className="col-md-6 ">
                         <CardTitle>
                             <div className="float-left ml-4 my-2">Spliced Art</div>
                         </CardTitle>
-                        <CardImg top width="100%" height="52%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                        <CardImg top width="100%" height="72%" src={this.state.selectedArt.src} />
                         <CardBody className="float-left ml-2">
-                          <Link to="/draw"><Button color="primary btn-lg active">creARTivity!<i className="fa fa-arrow-right fa-lg text-white" aria-hidden="true"></i></Button></Link>
+                          <Link to="/draw"><Button color="primary btn-lg active">creART<i className="fa fa-arrow-right fa-lg text-white" aria-hidden="true"></i></Button></Link>
                         </CardBody>
                     </div>
                 </div>
