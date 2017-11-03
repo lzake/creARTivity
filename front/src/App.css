@@ -197,3 +197,8 @@ footer{
 div.card.flipped{
     background-color:transparent;
 }
+
+.card-img-top {
+  height: 775.25px;
+  width: 775.25px;
+}
