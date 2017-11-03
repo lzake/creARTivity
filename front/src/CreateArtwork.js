@@ -56,7 +56,7 @@ function creArtivity() {
 //for each iteration generates a Url to the locally stored image
 //and produces Image data that can be used for comparison purposes
 var image = new Image();
-image.src = '/jptwo.jpg';
+image.src = '/jptwo.png';
 function createSquares() {
     for(var x = 0; x < 20; ++x) {
         for(var y = 0; y < 20; ++y) {
