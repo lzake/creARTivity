@@ -151,7 +151,7 @@ class Selectsplice extends Component {
                         <CardTitle>
                             <div className="float-left ml-4 my-2">Spliced Art</div>
                         </CardTitle>
-                        <CardImg top width="100%" height="72%" src={this.state.selectedArt.src} />
+                        <CardImg top width="100%" height="auto" src={this.state.selectedArt.src} />
                         <CardBody className="float-left ml-2">
                           <Link to="/draw"><Button color="primary btn-lg active">creART<i className="fa fa-arrow-right fa-lg text-white" aria-hidden="true"></i></Button></Link>
                         </CardBody>
