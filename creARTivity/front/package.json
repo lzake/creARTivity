@@ -1,0 +1,32 @@
+{
+  "name": "creartivity-front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "build-js": "^1.0.0",
+    "fabric": "^1.7.19",
+    "greuler": "^0.5.5",
+    "history": "^4.7.2",
+    "konva": "^1.7.6",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-konva": "^1.1.6",
+    "react-load-script": "0.0.6",
+    "react-native": "^0.49.5",
+    "react-router-dom": "^4.2.2",
+    "react-router-with-props": "^0.1.1",
+    "react-scripts": "1.0.14",
+    "reactstrap": "^5.0.0-alpha.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "html-webpack-cdn-plugin": "^0.2.0"
+  }
+}
