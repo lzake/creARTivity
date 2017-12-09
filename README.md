@@ -1,13 +1,13 @@
 #React website hosting es6/js procedurally generated art 
 
 1. Splash
-![splash](/creARTivity/splash.png "splash")
+<kbd><img src="./creARTivity/splash.png" /></kbd>
 
 1. Selection
-![select](/creARTivity/select.png "select")
+<kbd><img src="./creARTivity/select.png" /></kbd>
 
 1. Pre-render
-![pre](/creARTivity/pre.png "pre")
+<kbd><img src="./creARTivity/pre.png" /></kbd>
 
 
 
