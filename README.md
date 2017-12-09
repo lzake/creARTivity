@@ -1,4 +1,4 @@
-#React website hosting es6/js procedurally generated art 
+# React website hosting es6/js procedurally generated art 
 
 1. Splash
 <kbd><img src="./creARTivity/splash.png" /></kbd>
